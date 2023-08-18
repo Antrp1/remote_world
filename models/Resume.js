@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Messages extends Model {}
+class Resume extends Model {}
 
-Messages.init(
+Resume.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,7 +11,15 @@ Messages.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    message: {
+    description: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    education: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    skills: {
       type: DataTypes.STRING,
       allowNull: true,
     },
@@ -22,15 +30,7 @@ Messages.init(
         model: "User",
         key: "id",
       },
-    },
-    channelId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      reference: {
-        model: "Channel",
-        key: "id",
-      },
-    },
+    }
   },
   {
     sequelize,
@@ -38,8 +38,8 @@ Messages.init(
     updatedAt: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "Messages",
+    modelName: "Resume",
   }
 );
 
-module.exports = Messages;
+module.exports = Resume;

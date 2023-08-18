@@ -30,70 +30,6 @@ class EventEmitter {
 
 const eventSys = new EventEmitter();
 
-// html button handlers
-(function () {
-  const sendPacket = async (event) => {
-    const message = document.querySelector("#typed-message").value.trim();
-    document.querySelector("#typed-message").value = "";
-
-    if (message) {
-      console.log(message);
-      eventSys.emit(
-        "sendPacket",
-        JSON.stringify({ type: "message", data: { message } })
-      );
-    }
-  };
-
-  eventSys.on("message", (data) => {
-    let div = document.createElement("div");
-    div.innerText = data.message;
-    messages.appendChild(div);
-  });
-  document.querySelector("#typed-message")?.addEventListener("keydown", (e) => {
-    e.key === "Enter" && sendPacket();
-  });
-  document
-    .querySelector("#send-message")
-    ?.addEventListener("click", sendPacket);
-})();
-
-// websocket
-(function () {
-  if (location.pathname !== "/") return;
-
-  const ws = io();
-  // const ws = new socket("ws://" + location.hostname + ":3001");
-
-  ws.on("message", (message) => {
-    let packet = JSON.parse(message);
-    eventSys.emit(packet.type, packet.data);
-  });
-
-  ws.on("error", () => {
-    // document.location = "about:blank";
-  });
-
-  ws.on("connect", () => {
-    console.log("Connection Opened");
-    let token = JSON.parse(localStorage.getItem("token"));
-    let packet = JSON.stringify({ type: "init", data: { token } });
-    eventSys.emit("sendPacket", packet);
-    eventSys.emit("wsconnect");
-    // document.location = "about:blank";
-  });
-
-  ws.on("close", () => {
-    console.log("Connection Closed");
-    // document.location = "about:blank";
-  });
-
-  eventSys.on("sendPacket", (packet) => {
-    console.log(packet);
-    ws.emit("message", packet);
-  });
-})();
-
 (function () {
   if (location.pathname !== "/login") return;
   const loginForm = async (e) => {
@@ -250,36 +186,6 @@ function selectNav(div, el) {
     .querySelector("#create-channel-btn")
     ?.addEventListener("click", viewChannelForm);
 })();
-
-function getChannel(id, callback) {
-  let packet = JSON.stringify({
-    type: "join_channel",
-    data: { id },
-  });
-  eventSys.on("join_channel", (data) => {
-    callback(data);
-    eventSys.delete("join_channel");
-  });
-  eventSys.emit("sendPacket", packet);
-}
-
-function populateChannel(id) {
-  getChannel(id, (data) => {
-    console.log(data);
-    let messagesEl = document.querySelector("#messages");
-    messagesEl.innerHTML = "";
-    for (let Message of data.Messages) {
-      let div = document.createElement("div");
-      div.innerText = Message.message;
-      messagesEl.appendChild(div);
-    }
-    console.log(data);
-    selectNav(
-      document.querySelector("#home"),
-      document.querySelector("#home-btn")
-    );
-  });
-}
 
 (function () {
   if (location.pathname !== "/") return;

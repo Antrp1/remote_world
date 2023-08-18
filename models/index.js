@@ -1,8 +1,8 @@
 const User = require("./User");
-const Messages = require("./Messages");
+const Resume = require("./Resume");
 
-User.hasMany(Messages, {
+User.hasOne(Resume, {
   foreignKey: "user_id",
 });
 
-module.exports = { User, Messages };
+module.exports = { User, Resume };
