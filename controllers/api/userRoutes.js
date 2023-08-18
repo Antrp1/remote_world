@@ -1,7 +1,5 @@
 const router = require("express").Router();
 const { User } = require("../../models/index");
-const wss = require("../../ws-server");
-const s = require("../../utils/session");
 
 // create user route
 router.post("/", async (req, res) => {
@@ -14,11 +12,7 @@ router.post("/", async (req, res) => {
       const user = userData.toJSON();
       req.session.name = user.name;
       req.session.loggedIn = true;
-      req.session.sToken = s;
-      let token = Math.floor(Math.random() * 100000);
-      wss.tokens[token] = user;
-      req.session.token = token;
-      res.status(200).json(JSON.stringify(token));
+      res.status(200);
     });
   } catch (err) {
     console.log(err);
@@ -50,12 +44,8 @@ router.post("/login", async (req, res) => {
       const user = userData.toJSON();
       req.session.name = user.name;
       req.session.loggedIn = true;
-      req.session.sToken = s;
-      let token = Math.floor(Math.random() * 100000);
-      wss.tokens[token] = user;
-      req.session.token = token;
       // res.json({ user: userData, message: "You successfully logged in" });
-      res.status(200).json(JSON.stringify(token));
+      res.status(200);
     });
   } catch (err) {
     console.log(err);
