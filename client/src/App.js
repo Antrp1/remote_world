@@ -7,6 +7,7 @@ import { createMedia } from "@artsy/fresnel";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { InView } from "react-intersection-observer";
+// import { motion } from "framer-motion";
 import {
   Button,
   Container,
@@ -48,7 +49,7 @@ const HomepageHeading = ({ mobile }) => (
     />
     <Header
       as="h2"
-      content="Looking for something kewl? Find remote jobs specialized for you!"
+      content="Looking for a kewl job? Find remote work specialized for you!"
       inverted
       style={{
         fontSize: mobile ? "1.5em" : "1.7em",
@@ -216,7 +217,7 @@ ResponsiveContainer.propTypes = {
 
 const HomepageLayout = () => (
   <ResponsiveContainer>
-    <Segment style={{ padding: "8em 0em" }} vertical>
+    <Segment style={{ padding: "6em 0em" }} vertical>
       <Grid container stackable verticalAlign="middle">
         <Grid.Row>
           <Grid.Column width={8}>
@@ -224,9 +225,60 @@ const HomepageLayout = () => (
               We help coders find companies...
             </Header>
             <p style={{ fontSize: "1.33em" }}>
-              and companies find coders...Let us find the best fit for you!
+              ...and companies find coders! Let us find the best fit for you!
               Something Kewl wants our subscribers to showcase their talents
-              through our platform.
+              through our platform, in order for them to connect with potential
+              employers.
+            </p>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    </Segment>
+
+    <Segment style={{ padding: "6em 0em" }} vertical>
+      <Container text>
+        <Divider
+          as="h4"
+          className="header"
+          horizontal
+          style={{ margin: ".2em 0em", textTransform: "uppercase" }}
+        >
+          <h3>Meet the kewl krew</h3>
+        </Divider>
+      </Container>
+    </Segment>
+
+    <Segment style={{ padding: "0em" }} vertical>
+      <Grid celled="internally" columns="equal" stackable>
+        <Grid.Row textAlign="center">
+          <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
+            <div>
+              <img
+                src="https://react.semantic-ui.com/images/wireframe/square-image.png"
+                alt=""
+                class="ui small centered circular image"
+              />
+            </div>
+            <Header as="h3" style={{ fontSize: "2em" }}>
+              Anthony Padfield
+            </Header>
+            <p style={{ fontSize: "1.33em" }}>
+              (enter short bio here + change image)
+            </p>
+          </Grid.Column>
+          <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
+            <div>
+              <img
+                src="https://react.semantic-ui.com/images/wireframe/square-image.png"
+                alt=""
+                class="ui small centered circular image"
+              />
+            </div>
+            <Header as="h3" style={{ fontSize: "2em" }}>
+              Aden Eldred
+            </Header>
+            <p style={{ fontSize: "1.33em" }}>
+              (enter short bio here + change image)
             </p>
           </Grid.Column>
         </Grid.Row>
@@ -237,44 +289,63 @@ const HomepageLayout = () => (
       <Grid celled="internally" columns="equal" stackable>
         <Grid.Row textAlign="center">
           <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
+            <div>
+              <img
+                src="/smirkingcat.jpg"
+                alt=""
+                class="ui small centered circular image"
+              />
+            </div>
             <Header as="h3" style={{ fontSize: "2em" }}>
-              "What a Company"
+              Evelin Ortega
             </Header>
             <p style={{ fontSize: "1.33em" }}>
-              That is what they all say about us
+              (enter short bio here + change image)
             </p>
           </Grid.Column>
           <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
+            <div>
+              <img
+                src="https://react.semantic-ui.com/images/wireframe/square-image.png"
+                alt=""
+                class="ui small centered circular image"
+              />
+            </div>
             <Header as="h3" style={{ fontSize: "2em" }}>
-              "I shouldn't have gone with their competitor."
+              Grace Cabrera
             </Header>
             <p style={{ fontSize: "1.33em" }}>
-              <b>Nan</b> Chief Fun Officer Acme Toys
+              (enter short bio here + change image)
             </p>
           </Grid.Column>
         </Grid.Row>
       </Grid>
     </Segment>
 
-    <Segment style={{ padding: "8em 0em" }} vertical>
+    {/* paste code somewhere here */}
+
+    <Segment inverted vertical style={{ padding: "2em 0em" }}>
       <Container text>
         <Divider
           as="h4"
           className="header"
           horizontal
-          style={{ margin: "3em 0em", textTransform: "uppercase" }}
+          style={{
+            margin: "0em 0em",
+            textTransform: "uppercase",
+            padding: "6em 0em",
+            color: "white",
+          }}
         >
-          <a href="#">Meet the kewl krew</a>
+          <h3>Contact Us</h3>
         </Divider>
       </Container>
-    </Segment>
 
-    <Segment inverted vertical style={{ padding: "5em 0em" }}>
       <Container>
         <Grid divided inverted stackable>
           <Grid.Row>
             <Grid.Column width={3}>
-              <Header inverted as="h4" content="Contact Us" />
+              <Header inverted as="h4" content="Anthony P." />
               <List link inverted>
                 <List.Item as="a"> Everyone's Contact Info</List.Item>
                 <List.Item as="a"> Everyone's Contact Info</List.Item>
@@ -283,7 +354,37 @@ const HomepageLayout = () => (
               </List>
             </Grid.Column>
 
-            <Grid.Column width={7}>
+            <Grid.Column width={3}>
+              <Header inverted as="h4" content="Aden E." />
+              <List link inverted>
+                <List.Item as="a"> Everyone's Contact Info</List.Item>
+                <List.Item as="a"> Everyone's Contact Info</List.Item>
+                <List.Item as="a"> Everyone's Contact Info</List.Item>
+                <List.Item as="a"> Everyone's Contact Info</List.Item>
+              </List>
+            </Grid.Column>
+
+            <Grid.Column width={3}>
+              <Header inverted as="h4" content="Evelin O." />
+              <List link inverted>
+                <List.Item as="a"> Everyone's Contact Info</List.Item>
+                <List.Item as="a"> Everyone's Contact Info</List.Item>
+                <List.Item as="a"> Everyone's Contact Info</List.Item>
+                <List.Item as="a"> Everyone's Contact Info</List.Item>
+              </List>
+            </Grid.Column>
+
+            <Grid.Column width={3}>
+              <Header inverted as="h4" content="Grace C." />
+              <List link inverted>
+                <List.Item as="a"> Everyone's Contact Info</List.Item>
+                <List.Item as="a"> Everyone's Contact Info</List.Item>
+                <List.Item as="a"> Everyone's Contact Info</List.Item>
+                <List.Item as="a"> Everyone's Contact Info</List.Item>
+              </List>
+            </Grid.Column>
+
+            {/* <Grid.Column width={7}>
               <Header as="h4" inverted>
                 Footer Header
               </Header>
@@ -291,7 +392,7 @@ const HomepageLayout = () => (
                 Extra space for a call to action inside the footer that could
                 help re-engage users.
               </p>
-            </Grid.Column>
+            </Grid.Column> */}
           </Grid.Row>
         </Grid>
       </Container>
