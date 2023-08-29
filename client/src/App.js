@@ -38,7 +38,7 @@ const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
       as="h1"
-      content="Something-Kewl"
+      content="Remote-World"
       inverted
       style={{
         fontSize: mobile ? "2em" : "4em",
@@ -49,7 +49,7 @@ const HomepageHeading = ({ mobile }) => (
     />
     <Header
       as="h2"
-      content="Looking for a kewl job? Find remote work specialized for you!"
+      content="Looking for coding jobs? Find remote work specialized for you!"
       inverted
       style={{
         fontSize: mobile ? "1.5em" : "1.7em",
@@ -58,7 +58,7 @@ const HomepageHeading = ({ mobile }) => (
       }}
     />
     <Button primary size="huge">
-      Find kewl jobs!
+      Find remote jobs!
       <Icon name="right arrow" />
     </Button>
   </Container>
@@ -226,7 +226,7 @@ const HomepageLayout = () => (
             </Header>
             <p style={{ fontSize: "1.33em" }}>
               ...and companies find coders! Let us find the best fit for you!
-              Something Kewl wants our subscribers to showcase their talents
+              Remote World wants our subscribers to showcase their talents
               through our platform, in order for them to connect with potential
               employers.
             </p>
@@ -243,7 +243,7 @@ const HomepageLayout = () => (
           horizontal
           style={{ margin: ".2em 0em", textTransform: "uppercase" }}
         >
-          <h3>Meet the kewl krew</h3>
+          <h3>Meet the Creators</h3>
         </Divider>
       </Container>
     </Segment>
