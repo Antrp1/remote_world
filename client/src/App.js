@@ -9,6 +9,7 @@ import ContactUs from './Segments/ContactUs';
 import Home from './Pages/Home';
 import Signup from './Pages/Signup';
 import Jobs from './Pages/Jobs';
+import NavBar from './Segments/NavBar'
 
 /* Heads up!
  * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
@@ -19,6 +20,7 @@ class RoutingThing extends Component {
   render() {
     return (
       <BrowserRouter>
+        <NavBar />
         <Switch>
           <Route exact path="/">
             <Home />
