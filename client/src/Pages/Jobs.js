@@ -44,11 +44,11 @@ const ResponsiveLayout = () => (
               <span>Category</span>
             </Item.Meta>
             <Item.Description>
-              
+
             </Item.Description>
             <Item.Extra>
               <Image avatar circular src='/images/wireframe/square-image.png' />
-              
+
             </Item.Extra>
           </Item.Content>
         </Item>
@@ -62,7 +62,7 @@ const ResponsiveLayout = () => (
               <span>Category</span>
             </Item.Meta>
             <Item.Description>
-            
+
             </Item.Description>
             <Item.Extra>
               <Button floated='right' primary>
@@ -82,7 +82,7 @@ const ResponsiveLayout = () => (
               <span>Category</span>
             </Item.Meta>
             <Item.Description>
-             
+
             </Item.Description>
             <Item.Extra>
               <Button primary floated='right'>
