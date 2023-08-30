@@ -66,13 +66,14 @@ export default function personalBios() {
                 Evelin Ortega
               </Header>
               <p style={{ fontSize: "1.33em" }}>
-                (enter short bio here + change image)
+                404: Sense of direction not found, both in life and in
+                programming.
               </p>
             </Grid.Column>
             <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
               <div>
                 <img
-                  src="https://react.semantic-ui.com/images/wireframe/square-image.png"
+                  src="/partyhatcat.jpeg"
                   alt=""
                   class="ui small centered circular image"
                 />
@@ -88,5 +89,5 @@ export default function personalBios() {
         </Grid>
       </Segment>
     </>
-  )
+  );
 }

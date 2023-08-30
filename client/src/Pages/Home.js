@@ -14,40 +14,39 @@ import {
   Sidebar,
 } from "semantic-ui-react";
 
-import { Container as bootstrapContainer, Nav, Navbar } from 'react-bootstrap';
+// import { Container as bootstrapContainer, Nav, Navbar } from 'react-bootstrap';
 
 import PropTypes from "prop-types";
 
-
-import PersonalBios from '../Segments/PersonalBios';
+import PersonalBios from "../Segments/PersonalBios";
 
 const HomepageHeading = ({ mobile }) => (
   <Container text>
-      <Header
-          as="h1"
-          content="Remote-World"
-          inverted
-          style={{
-              fontSize: mobile ? "2em" : "4em",
-              fontWeight: "normal",
-              marginBottom: 0,
-              marginTop: mobile ? "1.5em" : "3em",
-          }}
-      />
-      <Header
-          as="h2"
-          content="Looking for coding jobs? Find remote work specialized for you!"
-          inverted
-          style={{
-              fontSize: mobile ? "1.5em" : "1.7em",
-              fontWeight: "normal",
-              marginTop: mobile ? "0.5em" : "1.5em",
-          }}
-      />
-      <Button primary size="huge">
-          Find remote jobs!
-          <Icon name="right arrow" />
-      </Button>
+    <Header
+      as="h1"
+      content="Remote-World"
+      inverted
+      style={{
+        fontSize: mobile ? "2em" : "4em",
+        fontWeight: "normal",
+        marginBottom: 0,
+        marginTop: mobile ? "1.5em" : "3em",
+      }}
+    />
+    <Header
+      as="h2"
+      content="Looking for coding jobs? Find remote work specialized for you!"
+      inverted
+      style={{
+        fontSize: mobile ? "1.5em" : "1.7em",
+        fontWeight: "normal",
+        marginTop: mobile ? "0.5em" : "1.5em",
+      }}
+    />
+    <Button primary size="huge">
+      Find remote jobs!
+      <Icon name="right arrow" />
+    </Button>
   </Container>
 );
 
@@ -56,7 +55,6 @@ HomepageHeading.propTypes = {
 };
 
 class Home extends Component {
-
   toggleFixedMenu = (inView) => this.setState({ fixed: !inView });
 
   handleSidebarHide = () => this.setState({ sidebarOpened: false });
@@ -74,10 +72,10 @@ class Home extends Component {
                   We help coders find companies...
                 </Header>
                 <p style={{ fontSize: "1.33em" }}>
-                  ...and companies find coders! Let us find the best fit for you!
-                  Remote World wants our subscribers to showcase their talents
-                  through our platform, in order for them to connect with potential
-                  employers.
+                  ...and companies find coders! Let us find the best fit for
+                  you! Remote World wants our subscribers to showcase their
+                  talents through our platform, in order for them to connect
+                  with potential employers.
                 </p>
               </Grid.Column>
             </Grid.Row>
