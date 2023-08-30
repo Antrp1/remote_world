@@ -3,7 +3,7 @@
 
 import "semantic-ui-css/semantic.min.css";
 import React, { Component } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom/cjs/react-router-dom";
 // import { motion } from "framer-motion";
 import ContactUs from "./Segments/ContactUs";
 import Home from "./Pages/Home";

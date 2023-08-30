@@ -1,6 +1,10 @@
 import React from 'react'
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
 
+function login() {
+
+}
+
 const LoginForm = () => (
   <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 450 }}>
@@ -17,7 +21,7 @@ const LoginForm = () => (
             type='password'
           />
 
-          <Button color='black' fluid size='large'>
+          <Button color='black' fluid size='large' onClick={login}>
             Login
           </Button>
         </Segment>
