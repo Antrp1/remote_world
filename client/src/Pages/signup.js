@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
+import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react'
 
 function login() {
 
@@ -26,8 +26,8 @@ const LoginForm = () => (
           </Button>
         </Segment>
       </Form>
-      <Message>
-       <a href='#'>Sign Up</a>
+      <Message href="#">
+        Sign Up
       </Message>
     </Grid.Column>
   </Grid>

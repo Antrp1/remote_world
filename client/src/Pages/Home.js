@@ -1,17 +1,11 @@
 import { Component } from "react";
 
 import {
-  Button,
   Container,
   Divider,
   Grid,
   Header,
-  Icon,
-  Image,
-  List,
-  Menu,
-  Segment,
-  Sidebar,
+  Segment
 } from "semantic-ui-react";
 
 // import { Container as bootstrapContainer, Nav, Navbar } from 'react-bootstrap';

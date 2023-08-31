@@ -1,15 +1,7 @@
 import {
-  Button,
-  Container,
-  Divider,
   Grid,
   Header,
-  Icon,
-  Image,
-  List,
-  Menu,
-  Segment,
-  Sidebar,
+  Segment
 } from "semantic-ui-react";
 export default function personalBios() {
   return (
