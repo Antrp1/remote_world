@@ -14,7 +14,7 @@ import {
   Sidebar,
 } from "semantic-ui-react";
 
-import { Container as bootstrapContainer, Nav, Navbar } from 'react-bootstrap';
+// import { Container as bootstrapContainer, Nav, Navbar } from 'react-bootstrap';
 
 import PropTypes from "prop-types";
 
@@ -31,17 +31,19 @@ const HomepageHeading = ({ mobile }) => (
               fontSize: mobile ? "2em" : "4em",
               fontWeight: "normal",
               marginBottom: 0,
-              marginTop: mobile ? "1.5em" : "3em",
+              marginTop: mobile ? "0px" : "0px",
+              backgroundColor: "black"
           }}
       />
       <Header
-          as="h2"
+          as="h2" 
           content="Looking for coding jobs? Find remote work specialized for you!"
           inverted
           style={{
               fontSize: mobile ? "1.5em" : "1.7em",
               fontWeight: "normal",
               marginTop: mobile ? "0.5em" : "1.5em",
+              backgroundColor: "black"
           }}
       />
       <Button primary size="huge">

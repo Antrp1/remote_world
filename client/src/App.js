@@ -7,7 +7,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 // import { motion } from "framer-motion";
 import ContactUs from './Segments/ContactUs';
 import Home from './Pages/Home';
-import Signup from './Pages/Signup';
+import Signup from './Pages/Signup.js';
 import Jobs from './Pages/Jobs';
 import NavBar from './Segments/NavBar'
 
