@@ -14,6 +14,42 @@ import PropTypes from "prop-types";
 
 import PersonalBios from '../Segments/PersonalBios';
 
+const HomepageHeading = ({ mobile }) => (
+  <Container text>
+      <Header
+          as="h1"
+          content="Remote-World"
+          inverted
+          style={{
+              fontSize: mobile ? "2em" : "4em",
+              fontWeight: "normal",
+              marginBottom: 0,
+              marginTop: mobile ? "0px" : "0px",
+              backgroundColor: "black"
+          }}
+      />
+      <Header
+          as="h2"
+          content="Looking for coding jobs? Find remote work specialized for you!"
+          inverted
+          style={{
+              fontSize: mobile ? "1.5em" : "1.7em",
+              fontWeight: "normal",
+              marginTop: mobile ? "0.5em" : "1.5em",
+              backgroundColor: "black"
+          }}
+      />
+      <Button primary size="huge">
+          Find remote jobs!
+          <Icon name="right arrow" />
+      </Button>
+  </Container>
+);
+
+HomepageHeading.propTypes = {
+  mobile: PropTypes.bool,
+};
+
 class Home extends Component {
   toggleFixedMenu = (inView) => this.setState({ fixed: !inView });
 
