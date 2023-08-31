@@ -2,15 +2,11 @@ import { Component } from "react";
 import {
     Button,
     Container,
-    Divider,
-    Grid,
     Header,
     Icon,
-    Image,
-    List,
     Menu,
     Segment,
-    Sidebar,
+    Sidebar
 } from "semantic-ui-react";
 
 import { InView } from "react-intersection-observer";
@@ -102,20 +98,16 @@ export default class NavBar extends Component {
                                 size="large"
                             >
                                 <Container>
-                                    <Menu.Item active href="/">
+                                    <Menu.Item active={window.location.pathname === "/"} href="/">
                                         Home
                                     </Menu.Item>
-                                    <Menu.Item href="/jobs">
+                                    <Menu.Item active={window.location.pathname === "/jobs"} href="/jobs">
                                         Jobs
-                                    </Menu.Item>
-                                    <Menu.Item href="/jobs">
-                                        About Us
                                     </Menu.Item>
                                     <Menu.Item position="right">
                                         <Button inverted={!fixed}>
                                             Log in
                                         </Button>
-
                                         <Button
                                             href="/signup"
                                             inverted={!fixed}
@@ -132,51 +124,42 @@ export default class NavBar extends Component {
                     </InView>
                 </Media>
                 <Media as={Sidebar.Pushable} at="mobile">
-                    <Sidebar.Pushable>
-                        <Sidebar
-                            as={Menu}
-                            animation="overlay"
-                            inverted
-                            onHide={this.handleSidebarHide}
-                            vertical
-                            visible={sidebarOpened}
-                        >
-                            <Menu.Item as="a" active>
-                                Home
-                            </Menu.Item>
-                            <a href="/jobs">Jobs</a>
-                            <Menu.Item as="a">Jobs</Menu.Item>
-                            <Menu.Item as="a">About Us</Menu.Item>
-                            <Menu.Item as="a">Log in</Menu.Item>
-                            <Menu.Item as="a">Sign Up</Menu.Item>
-                        </Sidebar>
-
-                        <Sidebar.Pusher dimmed={sidebarOpened}>
-                            <Segment
-                                inverted
-                                textAlign="center"
-                                style={{ padding: "1em 0em" }}
-                                vertical
-                            >
-                                <Container>
-                                    <Menu inverted pointing secondary size="large">
-                                        <Menu.Item onClick={this.handleToggle}>
-                                            <Icon name="sidebar" />
-                                        </Menu.Item>
-                                        <Menu.Item position="right">
-                                            <Button as="a" inverted>
-                                                Log in
-                                            </Button>
-                                            <Button as="a" inverted style={{ marginLeft: "0.5em" }}>
-                                                Sign Up
-                                            </Button>
-                                        </Menu.Item>
-                                    </Menu>
-                                </Container>
-                                <HomepageHeading mobile />
-                            </Segment>
-                        </Sidebar.Pusher>
-                    </Sidebar.Pushable>
+                    <Segment
+                        inverted
+                        textAlign="center"
+                        style={{ padding: "1em 0em" }}
+                        vertical
+                    >
+                        <Container>
+                            <Menu inverted pointing secondary size="large">
+                                <Menu.Item onClick={this.handleToggle}>
+                                    <Icon name="sidebar" />
+                                </Menu.Item>
+                                <Menu.Item position="right">
+                                    <Button href="/signup" inverted>
+                                        Log in
+                                    </Button>
+                                    <Button href="/signup" inverted style={{ marginLeft: "0.5em" }}>
+                                        Sign Up
+                                    </Button>
+                                </Menu.Item>
+                            </Menu>
+                        </Container>
+                        <HomepageHeading mobile />
+                    </Segment>
+                    <Sidebar
+                        as={Menu}
+                        animation="overlay"
+                        inverted
+                        onHide={this.handleSidebarHide}
+                        vertical
+                        visible={sidebarOpened}
+                    >
+                        <Menu.Item href="/" active={window.location.pathname === "/"}>Home</Menu.Item>
+                        <Menu.Item href="/jobs" active={window.location.pathname === "/jobs"}>Jobs</Menu.Item>
+                        <Menu.Item href="/signup">Log in</Menu.Item>
+                        <Menu.Item href="/signup" active={window.location.pathname === "/signup"}>Sign Up</Menu.Item>
+                    </Sidebar>
                 </Media>
             </MediaContextProvider>
         );

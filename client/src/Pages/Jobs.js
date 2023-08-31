@@ -6,10 +6,8 @@ import {
   Container,
   Header,
   Icon,
-  Image,
   Item,
-  Label,
-  Step,
+  Label
 } from "semantic-ui-react";
 
 const style = {

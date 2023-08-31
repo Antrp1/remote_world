@@ -15,11 +15,6 @@ import PropTypes from "prop-types";
 import PersonalBios from '../Segments/PersonalBios';
 
 class Home extends Component {
-  toggleFixedMenu = (inView) => this.setState({ fixed: !inView });
-
-  handleSidebarHide = () => this.setState({ sidebarOpened: false });
-
-  handleToggle = () => this.setState({ sidebarOpened: true });
   render() {
     return (
       <>
@@ -40,7 +35,6 @@ class Home extends Component {
             </Grid.Row>
           </Grid>
         </Segment>
-
         <Segment style={{ padding: "6em 0em" }} vertical>
           <Container text>
             <Divider

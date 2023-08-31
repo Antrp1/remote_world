@@ -14,7 +14,7 @@ export default function personalBios() {
                 <img
                   src="/sad cat.jpeg"
                   alt=""
-                  class="ui small centered circular image"
+                  className="ui small centered circular image"
                 />
               </div>
               <Header as="h1" style={{ margin: "4px" }}>
@@ -37,7 +37,7 @@ export default function personalBios() {
                 <img
                   src="/aden.png"
                   alt=""
-                  class="ui small centered circular image"
+                  className="ui small centered circular image"
                 />
               </div>
               <Header as="h1" style={{ margin: "4px" }}>
@@ -67,7 +67,7 @@ export default function personalBios() {
                 <img
                   src="/smirkingcat.jpg"
                   alt=""
-                  class="ui small centered circular image"
+                  className="ui small centered circular image"
                 />
               </div>
               <Header as="h1" style={{ margin: "4px" }}>
@@ -90,7 +90,7 @@ export default function personalBios() {
                 <img
                   src="/partyhatcat.jpeg"
                   alt=""
-                  class="ui small centered circular image"
+                  className="ui small centered circular image"
                 />
               </div>
               <Header as="h1" style={{ margin: "4px" }}>

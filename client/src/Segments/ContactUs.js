@@ -1,15 +1,10 @@
 import {
-  Button,
   Container,
   Divider,
   Grid,
   Header,
-  Icon,
-  Image,
   List,
-  Menu,
   Segment,
-  Sidebar,
 } from "semantic-ui-react";
 export default function ContactUs() {
   return (
@@ -31,12 +26,12 @@ export default function ContactUs() {
       </Container>
 
       <Container>
-        <Grid divided inverted stackable>
+        <Grid centered divided inverted stackable>
           <Grid.Row>
             <Grid.Column width={3}>
               <Header inverted as="h4" content="Anthony P." />
               <List link inverted>
-                <List.Item as="a">
+                <List.Item>
                   <a href="https://github.com/Antrp1" target="_blank">
                     Anthony's GitHub
                   </a>
@@ -47,7 +42,7 @@ export default function ContactUs() {
             <Grid.Column width={3}>
               <Header inverted as="h4" content="Aden E." />
               <List link inverted>
-                <List.Item as="a">
+                <List.Item>
                   <a href="https://github.com/NekoNoka" target="_blank">
                     Aden's GitHub
                   </a>
@@ -58,7 +53,7 @@ export default function ContactUs() {
             <Grid.Column width={3}>
               <Header inverted as="h4" content="Evelin O." />
               <List link inverted>
-                <List.Item as="a">
+                <List.Item>
                   <a href="https://github.com/evelynortega" target="_blank">
                     Evelin's GitHub
                   </a>
@@ -69,7 +64,7 @@ export default function ContactUs() {
             <Grid.Column width={3}>
               <Header inverted as="h4" content="Grace C." />
               <List link inverted>
-                <List.Item as="a">
+                <List.Item>
                   <a href="https://github.com/gracexcabrera" target="_blank">
                     Grace's GitHub
                   </a>
