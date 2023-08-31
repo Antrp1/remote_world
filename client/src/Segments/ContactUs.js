@@ -32,7 +32,7 @@ export default function ContactUs() {
               <Header inverted as="h4" content="Anthony P." />
               <List link inverted>
                 <List.Item>
-                  <a href="https://github.com/Antrp1" target="_blank">
+                  <a href="https://github.com/Antrp1" target="_blank" rel="noreferrer">
                     Anthony's GitHub
                   </a>
                 </List.Item>
@@ -43,7 +43,7 @@ export default function ContactUs() {
               <Header inverted as="h4" content="Aden E." />
               <List link inverted>
                 <List.Item>
-                  <a href="https://github.com/NekoNoka" target="_blank">
+                  <a href="https://github.com/NekoNoka" target="_blank" rel="noreferrer">
                     Aden's GitHub
                   </a>
                 </List.Item>
@@ -54,7 +54,7 @@ export default function ContactUs() {
               <Header inverted as="h4" content="Evelin O." />
               <List link inverted>
                 <List.Item>
-                  <a href="https://github.com/evelynortega" target="_blank">
+                  <a href="https://github.com/evelynortega" target="_blank" rel="noreferrer">
                     Evelin's GitHub
                   </a>
                 </List.Item>
@@ -65,7 +65,7 @@ export default function ContactUs() {
               <Header inverted as="h4" content="Grace C." />
               <List link inverted>
                 <List.Item>
-                  <a href="https://github.com/gracexcabrera" target="_blank">
+                  <a href="https://github.com/gracexcabrera" target="_blank" rel="noreferrer">
                     Grace's GitHub
                   </a>
                 </List.Item>
