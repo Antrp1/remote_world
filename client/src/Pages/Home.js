@@ -18,7 +18,6 @@ import {
 
 import PropTypes from "prop-types";
 
-
 import PersonalBios from '../Segments/PersonalBios';
 
 const HomepageHeading = ({ mobile }) => (
@@ -36,7 +35,7 @@ const HomepageHeading = ({ mobile }) => (
           }}
       />
       <Header
-          as="h2" 
+          as="h2"
           content="Looking for coding jobs? Find remote work specialized for you!"
           inverted
           style={{
@@ -58,7 +57,6 @@ HomepageHeading.propTypes = {
 };
 
 class Home extends Component {
-
   toggleFixedMenu = (inView) => this.setState({ fixed: !inView });
 
   handleSidebarHide = () => this.setState({ sidebarOpened: false });
@@ -67,7 +65,6 @@ class Home extends Component {
   render() {
     return (
       <>
-        <HomepageHeading />
         <Segment style={{ padding: "6em 0em" }} vertical>
           <Grid container stackable verticalAlign="middle">
             <Grid.Row>
@@ -76,10 +73,10 @@ class Home extends Component {
                   We help coders find companies...
                 </Header>
                 <p style={{ fontSize: "1.33em" }}>
-                  ...and companies find coders! Let us find the best fit for you!
-                  Remote World wants our subscribers to showcase their talents
-                  through our platform, in order for them to connect with potential
-                  employers.
+                  ...and companies find coders! Let us find the best fit for
+                  you! Remote World wants our subscribers to showcase their
+                  talents through our platform, in order for them to connect
+                  with potential employers.
                 </p>
               </Grid.Column>
             </Grid.Row>
