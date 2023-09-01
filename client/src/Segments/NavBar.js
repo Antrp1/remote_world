@@ -105,7 +105,7 @@ export default class NavBar extends Component {
                                             Home
                                         </Menu.Item>
                                     </Link>
-                                    <Link to="/jobs">login
+                                    <Link to="/jobs">
                                         <Menu.Item active={window.location.pathname === "/jobs"}>
                                             Jobs
                                         </Menu.Item>
