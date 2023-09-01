@@ -8,6 +8,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom/cjs/react-router-
 import ContactUs from "./Segments/ContactUs";
 import Home from "./Pages/Home";
 import Signup from "./Pages/Signup";
+import Login from "./Pages/Login";
 import Jobs from "./Pages/Jobs";
 import NavBar from "./Segments/NavBar";
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
@@ -47,11 +48,9 @@ function RoutingThing() {
           <Route exact path="/">
             <Home />
           </Route>
-          {/*
           <Route path="/login">
             <Login />
           </Route>
-          */}
           <Route path="/signup">
             <Signup />
           </Route>

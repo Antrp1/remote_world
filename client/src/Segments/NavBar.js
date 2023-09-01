@@ -105,7 +105,10 @@ export default class NavBar extends Component {
                                         Jobs
                                     </Menu.Item>
                                     <Menu.Item position="right">
-                                        <Button inverted={!fixed}>
+                                        <Button
+                                            href="/signup"
+                                            inverted={!fixed}
+                                        >
                                             Log in
                                         </Button>
                                         <Button

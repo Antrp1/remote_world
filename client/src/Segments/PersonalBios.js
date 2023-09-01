@@ -3,6 +3,11 @@ import {
   Header,
   Segment
 } from "semantic-ui-react";
+import aden from '../assets/aden.png';
+import sadCat from '../assets/sad cat.jpeg';
+import smirkingCat from '../assets/smirkingcat.jpg';
+import partyHatCat from '../assets/partyhatcat.jpeg';
+
 export default function personalBios() {
   return (
     <>
@@ -12,7 +17,7 @@ export default function personalBios() {
             <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
               <div>
                 <img
-                  src="/sad cat.jpeg"
+                  src={sadCat}
                   alt=""
                   className="ui small centered circular image"
                 />
@@ -35,7 +40,7 @@ export default function personalBios() {
             <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
               <div>
                 <img
-                  src="/aden.png"
+                  src={aden}
                   alt=""
                   className="ui small centered circular image"
                 />
@@ -65,7 +70,7 @@ export default function personalBios() {
             <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
               <div>
                 <img
-                  src="/smirkingcat.jpg"
+                  src={smirkingCat}
                   alt=""
                   className="ui small centered circular image"
                 />
@@ -88,7 +93,7 @@ export default function personalBios() {
             <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
               <div>
                 <img
-                  src="/partyhatcat.jpeg"
+                  src={partyHatCat}
                   alt=""
                   className="ui small centered circular image"
                 />

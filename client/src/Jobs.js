@@ -1,6 +1,7 @@
 import React from "react";
 import "semantic-ui-css/semantic.min.css";
 // import React, { Component } from "react";
+import stressedCoder from '../assets/stressed-coder.jpg';
 import {
   Button,
   Container,
@@ -51,7 +52,7 @@ const ResponsiveLayout = () => (
     <Container>
       <Item.Group divided>
         <Item>
-          <Item.Image src="/stressed-coder.jpg" />
+          <Item.Image src={stressedCoder} />
           <Item.Content>
             <Item.Header as="a">Junior Front End Web Developer</Item.Header>
             <Item.Meta>
@@ -83,7 +84,7 @@ const ResponsiveLayout = () => (
         </Item>
 
         <Item>
-          <Item.Image src="/stressed-coder.jpg" />
+          <Item.Image src={stressedCoder} />
           <Item.Content>
             <Item.Header as="a">Remote Medical Coder</Item.Header>
             <Item.Meta>
@@ -115,7 +116,7 @@ const ResponsiveLayout = () => (
           </Item.Content>
         </Item>
         <Item>
-          <Item.Image src="/stressed-coder.jpg" />
+          <Item.Image src={stressedCoder} />
           <Item.Content>
             <Item.Header as="a">Full-Stack Web Developer</Item.Header>
             <Item.Meta>
