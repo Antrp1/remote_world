@@ -3,10 +3,10 @@ import {
   Header,
   Segment
 } from "semantic-ui-react";
-import aden from '../assets/aden.png';
-import sadCat from '../assets/sad cat.jpeg';
-import smirkingCat from '../assets/smirkingcat.jpg';
-import partyHatCat from '../assets/partyhatcat.jpeg';
+import aden from '../assets/images/aden.png';
+import sadCat from '../assets/images/sad cat.jpeg';
+import smirkingCat from '../assets/images/smirkingcat.jpg';
+import partyHatCat from '../assets/images/partyhatcat.jpeg';
 
 export default function personalBios() {
   return (

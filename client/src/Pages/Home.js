@@ -8,8 +8,6 @@ import {
   Segment
 } from "semantic-ui-react";
 
-// import { Container as bootstrapContainer, Nav, Navbar } from 'react-bootstrap';
-
 import PropTypes from "prop-types";
 
 import PersonalBios from '../Segments/PersonalBios';

@@ -1,7 +1,7 @@
 import React from "react";
 import "semantic-ui-css/semantic.min.css";
 // import React, { Component } from "react";
-import stressedCoder from '../assets/stressed-coder.jpg';
+import stressedCoder from '../assets/images/stressed-coder.jpg';
 import {
   Button,
   Container,
