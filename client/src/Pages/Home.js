@@ -8,8 +8,6 @@ import {
   Segment
 } from "semantic-ui-react";
 
-import PropTypes from "prop-types";
-
 import PersonalBios from '../Segments/PersonalBios';
 
 class Home extends Component {

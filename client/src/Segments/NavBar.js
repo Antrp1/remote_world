@@ -2,6 +2,7 @@ import { Component } from "react";
 import {
     Button,
     Container,
+    Header,
     Icon,
     Menu,
     Segment,
@@ -12,7 +13,55 @@ import { InView } from "react-intersection-observer";
 
 import { createMedia } from "@artsy/fresnel";
 
-import {  Link } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
+
+import PropTypes from "prop-types";
+
+const HomepageHeading = ({ mobile }) => (
+    <Route exact path="/">
+        <Container
+            text
+            style={{ margin: "0em 0em 8em 0em" }}
+        >
+            <Header
+                as="h1"
+                content="Remote-World"
+                inverted
+                style={{
+                    fontSize: mobile ? "2em" : "4em",
+                    fontWeight: "normal",
+                    marginBottom: 0,
+                    marginTop: mobile ? "1.5em" : "3em",
+                }}
+            />
+            <Header
+                as="h2"
+                content="Looking for coding jobs? Find remote work specialized for you!"
+                inverted
+                style={{
+                    fontSize: mobile ? "1.5em" : "1.7em",
+                    fontWeight: "normal",
+                    marginTop: mobile ? "0.5em" : "1.5em",
+                }}
+            />
+            <Link to="/jobs">
+                <Button primary size="huge">
+                    Find remote jobs!
+                    <Icon name="right arrow" />
+                </Button>
+            </Link>
+        </Container>
+    </Route>
+);
+
+HomepageHeading.propTypes = {
+    mobile: PropTypes.bool,
+};
+
+/* Heads up!
+ * HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled
+ * components for such things.
+ */
 
 const { MediaContextProvider, Media } = createMedia({
     breakpoints: {
@@ -81,6 +130,7 @@ export default class NavBar extends Component {
                                     </Menu.Item>
                                 </Container>
                             </Menu>
+                            <HomepageHeading />
                         </Segment>
                     </InView>
                 </Media>
@@ -110,6 +160,7 @@ export default class NavBar extends Component {
                                 </Menu.Item>
                             </Menu>
                         </Container>
+                        <HomepageHeading mobile />
                     </Segment>
                     <Sidebar
                         as={Menu}
