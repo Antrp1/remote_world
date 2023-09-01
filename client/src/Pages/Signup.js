@@ -39,7 +39,7 @@ const LoginForm = () => {
               onChange={handleSignupChange}
               name="username"
               value={formSignup.username}
-              icon='lock'
+              icon='write'
               iconPosition='left'
               placeholder='Username'
             />

@@ -106,7 +106,7 @@ export default class NavBar extends Component {
                                     </Menu.Item>
                                     <Menu.Item position="right">
                                         <Button
-                                            href="/signup"
+                                            href="/login"
                                             inverted={!fixed}
                                         >
                                             Log in
@@ -139,7 +139,7 @@ export default class NavBar extends Component {
                                     <Icon name="sidebar" />
                                 </Menu.Item>
                                 <Menu.Item position="right">
-                                    <Button href="/signup" inverted>
+                                    <Button href="/login" inverted>
                                         Log in
                                     </Button>
                                     <Button href="/signup" inverted style={{ marginLeft: "0.5em" }}>
@@ -160,7 +160,7 @@ export default class NavBar extends Component {
                     >
                         <Menu.Item href="/" active={window.location.pathname === "/"}>Home</Menu.Item>
                         <Menu.Item href="/jobs" active={window.location.pathname === "/jobs"}>Jobs</Menu.Item>
-                        <Menu.Item href="/signup">Log in</Menu.Item>
+                        <Menu.Item href="/login" active={window.location.pathname === "/login"}>Log in</Menu.Item>
                         <Menu.Item href="/signup" active={window.location.pathname === "/signup"}>Sign Up</Menu.Item>
                     </Sidebar>
                 </Media>
