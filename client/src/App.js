@@ -3,7 +3,7 @@
 
 import "semantic-ui-css/semantic.min.css";
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom/cjs/react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import { motion } from "framer-motion";
 import ContactUs from "./Segments/ContactUs";
 import Home from "./Pages/Home";
@@ -39,29 +39,21 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-function RoutingThing() {
+function App() {
   return (
     <ApolloProvider client={client}>
       <BrowserRouter>
         <NavBar />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/signup">
-            <Signup />
-          </Route>
-          <Route path="/jobs">
-            <Jobs />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/jobs" element={<Jobs />} />
+        </Routes>
         <ContactUs />
       </BrowserRouter>
     </ApolloProvider>
   );
 }
 
-export default RoutingThing;
+export default App;

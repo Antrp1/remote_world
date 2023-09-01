@@ -20,7 +20,7 @@ class Home extends Component {
           <Grid container stackable verticalAlign="middle">
             <Grid.Row>
               <Grid.Column width={8}>
-                <Header as="h3" style={{ fontSize: "2em" }}>
+                <Header style={{ fontSize: "2em" }}>
                   We help coders find companies...
                 </Header>
                 <p style={{ fontSize: "1.33em" }}>
@@ -36,7 +36,6 @@ class Home extends Component {
         <Segment style={{ padding: "6em 0em" }} vertical>
           <Container text>
             <Divider
-              as="h4"
               className="header"
               horizontal
               style={{ margin: ".2em 0em", textTransform: "uppercase" }}
@@ -50,9 +49,5 @@ class Home extends Component {
     );
   }
 }
-
-Home.propTypes = {
-  children: PropTypes.node,
-};
 
 export default Home;
